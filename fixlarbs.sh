@@ -31,8 +31,11 @@ finalize(){ \
 # Check if user is root on Arch distro. Install dialog.
 pacman --noconfirm --needed -Sy dialog || error "Are you sure you're running this as the root user, are on an Arch-based distribution and have an internet connection?"
 
-# Welcome user and pick dotfiles.
+# Welcome user.
 welcomemsg || error "User exited."
+
+# Ask for home directory location.
+homelocation || error "User exited."
 
 # Ask for dwm location.
 dwmlocation || error "User exited."
@@ -40,14 +43,12 @@ dwmlocation || error "User exited."
 # Ask for st location.
 stlocation || error "User exited."
 
-# Last chance for user to back out before install.
+# Last chance for user to back out before system fixing.
 preinstallmsg || error "User exited."
 
 ### ACTUAL SCRIPT ###
 
-dialog --title "LARBS Fixing..." --infobox "Patching \`dwm\` to make it compatible with an AZERTY keyboard layout." 5 70
-
-# Go to dwm directory and modify workspace navigation.
+# Go to dwm directory and modify workspace navigation keys.
 cd $dwmloc
 sed -i 's/XK_1/XK_ampersand/g' config.h
 sed -i 's/XK_2/XK_eacute/g' config.h
@@ -59,13 +60,9 @@ sed -i 's/XK_7/XK_egrave/g' config.h
 sed -i 's/XK_8/XK_exclam/g' config.h
 sed -i 's/XK_9/XK_ccedilla/g' config.h
 
-dialog --title "LARBS Fixing..." --infobox "Patching \`st\` and changing the font." 5 70
-
 # Go to st directory and modify font size.
 cd $stloc
 sed -i 's/mono:pixelsize=12/mono:pixelsize=16/g' config.h
-
-dialog --title "LARBS Fixing..." --infobox "Patching \`some other things\` to make the experience nicer." 5 70
 
 # Go to home directory and remove unnecessary things.
 cd $homeloc
