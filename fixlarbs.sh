@@ -77,6 +77,9 @@ fi
 sed -i 's/#export GNUPGHOME/export GNUPGHOME/g' $homeloc/.config/shell/profile
 sed -i '/sh/a setxkbmap be' $homeloc/.local/bin/remaps
 
+# Install font package.
+pacman -Sy noto-fonts --noconfirm
+
 # Last message! LARBS fixing complete!
 finalize
 clear
