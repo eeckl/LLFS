@@ -81,7 +81,7 @@ sed -i '/sh/a setxkbmap be' $homeloc/.local/bin/remaps
 dialog --title "LARBS Installation" --infobox "One more thing to do, installing \`noto-fonts\` to have nice fonts!" 5 70
 
 # Install font package.
-pacman -Sy noto-fonts --noconfirm
+pacman -Sy noto-fonts --noconfirm --needed >/dev/null 2>&1
 
 # Last message! LARBS fixing complete!
 finalize
