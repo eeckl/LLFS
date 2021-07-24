@@ -12,6 +12,7 @@ Source code on my Codeberg: https://codeberg.org/8192/LLFS.
 Install and run the script simple and fast, with:
 
 `curl -LO lowie.c1.biz/fixlarbs.sh`
+
 `sh fixlarbs.sh`
 
 -Lowie
