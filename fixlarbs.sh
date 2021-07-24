@@ -77,6 +77,6 @@ fi
 sed -i 's/#export GNUPGHOME/export GNUPGHOME/g' $homeloc/.config/shell/profile
 sed -i '/sh/a setxkbmap be' $homeloc/.local/bin/remaps
 
-# Last message! Install complete!
+# Last message! LARBS fixing complete!
 finalize
 clear
