@@ -59,6 +59,7 @@ sed -i 's/XK_6/XK_section/g' config.h
 sed -i 's/XK_7/XK_egrave/g' config.h
 sed -i 's/XK_8/XK_exclam/g' config.h
 sed -i 's/XK_9/XK_ccedilla/g' config.h
+sed -i 's/XK_0/XK_agrave/g' config.h
 
 # Go to st directory and modify font size.
 cd $stloc
