@@ -48,6 +48,9 @@ preinstallmsg || error "User exited."
 
 ### ACTUAL SCRIPT ###
 
+# A message on the screen.
+dialog --title "LLFS" --infobox "Busy manipulating files." 5 70
+
 # Go to dwm directory and modify workspace navigation keys.
 cd $dwmloc
 sed -i 's/XK_1/XK_ampersand/g' config.h
@@ -60,10 +63,12 @@ sed -i 's/XK_7/XK_egrave/g' config.h
 sed -i 's/XK_8/XK_exclam/g' config.h
 sed -i 's/XK_9/XK_ccedilla/g' config.h
 sed -i 's/XK_0/XK_agrave/g' config.h
+make install >/dev/null 2>&1
 
 # Go to st directory and modify font size.
 cd $stloc
 sed -i 's/mono:pixelsize=12/mono:pixelsize=16/g' config.h
+make install >/dev/null 2>&1
 
 # Go to home directory and remove unnecessary things.
 cd $homeloc
@@ -78,8 +83,7 @@ fi
 sed -i 's/#export GNUPGHOME/export GNUPGHOME/g' $homeloc/.config/shell/profile
 sed -i '/sh/a setxkbmap be' $homeloc/.local/bin/remaps
 
-# Some messages on the screen.
-dialog --title "LLFS" --infobox "Busy manipulating files." 5 70 ; sleep 5
+# A message on the screen.
 dialog --title "LLFS" --infobox "One more thing to do, installing \`noto-fonts\` to have nice fonts!" 5 70
 
 # Install font package.
