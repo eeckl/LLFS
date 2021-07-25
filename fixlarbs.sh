@@ -78,7 +78,9 @@ fi
 sed -i 's/#export GNUPGHOME/export GNUPGHOME/g' $homeloc/.config/shell/profile
 sed -i '/sh/a setxkbmap be' $homeloc/.local/bin/remaps
 
-dialog --title "LARBS Installation" --infobox "One more thing to do, installing \`noto-fonts\` to have nice fonts!" 5 70
+# Some messages on the screen.
+dialog --title "LLFS" --infobox "Busy manipulating files." 5 70 ; sleep 5
+dialog --title "LLFS" --infobox "One more thing to do, installing \`noto-fonts\` to have nice fonts!" 5 70
 
 # Install font package.
 pacman -Sy noto-fonts --noconfirm --needed >/dev/null 2>&1
