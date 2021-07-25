@@ -79,9 +79,15 @@ if [ -f "$homeloc/.gitmodules" ] ; then
 	rm "$homeloc/.gitmodules"
 fi
 
-# Change and add line in important system files.
+# Change and add lines in important system files.
 sed -i 's/#export GNUPGHOME/export GNUPGHOME/g' $homeloc/.config/shell/profile
 sed -i '/sh/a setxkbmap be' $homeloc/.local/bin/remaps
+sed -i 's/Music/music/g' $homeloc/.config/mpd/mpd.conf
+sed -i 's/Music/music/g' $homeloc/.config/ncmpcpp/config
+
+# Mkdirs.
+mkdir dox music pix repos vids
+mkdir $homeloc/.config/mpd/playlists
 
 # A message on the screen.
 dialog --title "LLFS" --infobox "One more thing to do, installing \`noto-fonts\` to have nice fonts!" 5 70
