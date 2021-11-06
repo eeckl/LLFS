@@ -9,5 +9,5 @@ Why use this and why even bother?
 With this fixing script you get a better LARBS experience!
 
 Installation:
-curl -LO lowie.c1.biz/fixlarbs.sh
+curl -LO https://raw.githubusercontent.com/eeckl/LLFS/master/fixlarbs.sh
 sh fixlarbs.sh
