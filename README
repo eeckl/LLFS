@@ -16,5 +16,5 @@ Use the old version of the script to be sure things are working! The normal (new
 I'll probably update this script every major LARBS release/update. If the script is broken, please contact me.
 
 Installation:
-`curl -LO tinyurl.com/fixlarbs`
-`sudo sh fixlarbs`
+curl -LO tinyurl.com/fixlarbs
+sudo sh fixlarbs
