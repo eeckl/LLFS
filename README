@@ -1,16 +1,20 @@
-LLFS (Lowie's LARBS Fixing Scripts)
-===================================
+LLFS (Lowie's LARBS Fixing Script)
+==================================
 This script fixes a common LARBS installation. LARBS is Luke Smith's bootstrapping script.
 Why use this and why even bother?
 - LARBS is meant for people with a US keyboard layout, when running this fixing script, your whole system has AZERTY keyboard layout compatibility.
-- LARBS has not the best shell and X settings by default, this fixes that.
-- Fonts are better and are fixed, when you run this script.
+- LARBS doesn't have the best shell, X and MPD settings by default, this script fixes that.
+- Better fonts and font sizes are chosen, and installed with this script.
 - LARBS creates unnecessary directories and files in ~, this script removes them.
+- This script changes some keybinds to some better and easier ones.
+- Your home's subdirectories are efficiently handled with this script.
 With this fixing script you get a better LARBS experience!
 
 Warning:
 Use the old version of the script to be sure things are working! The normal (new) version isn't tested yet!
 
+I'll probably update this script every major LARBS release/update. If the script is broken, please contact me.
+
 Installation:
-curl -LO raw.githubusercontent.com/eeckl/LLFS/master/fixlarbs.sh
-sh fixlarbs.sh
+`curl -LO tinyurl.com/fixlarbs`
+`sudo sh fixlarbs`
