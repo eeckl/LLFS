@@ -8,6 +8,9 @@ Why use this and why even bother?
 - LARBS creates unnecessary directories and files in ~, this script removes them.
 With this fixing script you get a better LARBS experience!
 
+Warning:
+Use the old version of the script to be sure things are working! The normal (new) version isn't tested yet!
+
 Installation:
 curl -LO raw.githubusercontent.com/eeckl/LLFS/master/fixlarbs.sh
 sh fixlarbs.sh
